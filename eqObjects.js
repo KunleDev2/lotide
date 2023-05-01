@@ -44,8 +44,6 @@ const eqObjects = function(object1, object2) {
     return false;
   }
 
-  console.log(Object.keys(object1) + " | " + Object.keys(object1));
-
   for (const iterator of Object.keys(object1)) {
     if (eqArrays(Object.keys(object1), Object.keys(object2))) {
       if (object1[iterator] !== object2[iterator]) {
