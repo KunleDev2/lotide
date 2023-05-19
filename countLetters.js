@@ -1,29 +1,4 @@
-const assertEqual = function(actual, expected) {
-  const isAssertionPassed = " Assertion Passed: ";
-  const isAssertionFailed = " Assertion Failed: ";
-
-  if (actual === expected) {
-    console.log(
-      String.fromCodePoint(0x2705) +
-        String.fromCodePoint(0x2705) +
-        String.fromCodePoint(0x2705) +
-        `${isAssertionPassed}` +
-        actual +
-        " === " +
-        expected
-    );
-  } else {
-    console.log(
-      String.fromCodePoint(0x274c) +
-        String.fromCodePoint(0x274c) +
-        String.fromCodePoint(0x274c) +
-        `${isAssertionFailed}` +
-        actual +
-        " !== " +
-        expected
-    );
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const countLetters = function(itemsToCount) {
   const itemResult = {};
@@ -45,3 +20,5 @@ assertEqual(result1["L"], "LL");
 assertEqual(result1["H"], "H");
 assertEqual(result1["R"], undefined);
 assertEqual(result1["P"], undefined);
+
+module.exports = countLetters;
